@@ -1,20 +1,16 @@
-body {
-  font: 10px sans-serif;
-}
-
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #222222;
   shape-rendering: crispEdges;
 }
 
 .bar {
-  fill: #57AEF0;
+  fill: #417799;
 }
 
 .bar:hover {
-  fill: green;
+  fill: #FFA292;
 }
 
 .x.axis path {
@@ -25,8 +21,8 @@ body {
   line-height: 1;
   font-weight: bold;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background: #D2FFF8; /*rgba(0, 0, 0, 0.8);*/
+  color: #222222;
   border-radius: 2px;
 }
 
@@ -37,7 +33,7 @@ body {
   font-size: 10px;
   width: 100%;
   line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
+  color: #D2FFF8; /*rgba(0, 0, 0, 0.8);*/
   content: "\25BC";
   position: absolute;
   text-align: center;
