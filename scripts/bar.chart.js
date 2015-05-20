@@ -34,7 +34,7 @@ svg.call(tip);
 
 d3.tsv("HCI_Top10.tsv", function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
-  y.domain([0, d3.max(data, function(d) { return d.overall_score; })]);
+  y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_score; })]);
 
   svg.append("g")
       .attr("class", "x axis")
