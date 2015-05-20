@@ -21,8 +21,8 @@
   line-height: 1;
   font-weight: bold;
   padding: 12px;
-  background: #D2FFF8; /*rgba(0, 0, 0, 0.8);*/
-  color: #222222;
+  background: #222222; /*rgba(0, 0, 0, 0.8);*/
+  color: #D2FFF8;
   border-radius: 2px;
 }
 
@@ -33,7 +33,7 @@
   font-size: 10px;
   width: 100%;
   line-height: 1;
-  color: #D2FFF8; /*rgba(0, 0, 0, 0.8);*/
+  color: #222222; /*rgba(0, 0, 0, 0.8);*/
   content: "\25BC";
   position: absolute;
   text-align: center;
