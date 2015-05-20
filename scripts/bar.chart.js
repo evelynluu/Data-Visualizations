@@ -41,19 +41,19 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
-  var translateRotateLegend = d3.svg.transform().translate(-20,-30).rotate(-90);
+  var translateRotateLegend = d3.svg.transform().translate(-5,0).rotate(-90);
 	
-  svg.append("g")
-      .attr("class", "y axis")
-	  .attr("transform", "translate(-10,0)")
-      .call(yAxis)
-    .append("text")
+  svg.append("text")
 	  .attr("transform", translateRotateLegend)
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Score");
-
+    .append("g")
+      .attr("class", "y axis")
+	  .attr("transform", "translate(-10,0)")
+      .call(yAxis)
+	  
   svg.selectAll(".bar")
       .data(data)
     .enter().append("rect")
