@@ -43,7 +43,7 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
 
   svg.append("g")
       .attr("class", "y axis")
-	  .attr("transform", "translate(-10,0)")
+	  .attr("transform", "translate(30,-30)")
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
