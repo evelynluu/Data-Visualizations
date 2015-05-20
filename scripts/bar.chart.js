@@ -50,7 +50,7 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
 	  .attr("transform", "translate(-10,0)")
       .call(yAxis)
     .append("text")
-	  .attr("transform", "rotate(-45)")
+	  .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
