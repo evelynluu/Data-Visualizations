@@ -38,7 +38,7 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
 
   svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + 25 + ")")
+      .attr("transform", "translate(0," + height + 15 + ")")
       .call(xAxis);
 	
   svg.append("g")
