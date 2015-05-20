@@ -40,8 +40,6 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
-
-  var translateRotateLegend = d3.svg.transform().translate(0,0).rotate(-90);
 	
   svg.append("g")
       .attr("class", "y axis")
