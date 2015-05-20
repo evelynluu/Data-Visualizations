@@ -16,7 +16,7 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 	.ticks([15]);
-
+	
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
@@ -24,7 +24,7 @@ var tip = d3.tip()
     return "<strong>Overall Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
   })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("div#bargraph1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -34,7 +34,7 @@ svg.call(tip);
 
 d3.tsv("HCI_Top10.tsv", function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
-  y.domain([0, d3.max(data, function(d) { return d.overall_score + 10; })]);
+  y.domain([0, d3.max(data, function(d) { return d.overall_score; })]);
 
   svg.append("g")
       .attr("class", "x axis")
