@@ -1,6 +1,10 @@
 var margin = {top: 50, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
+	
+var transformLegend = d3.svg.transform()
+	.translate(-10, 0)
+	.rotate(-90)
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
@@ -46,7 +50,7 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
 	  .attr("transform", "translate(-10,0)")
       .call(yAxis)
     .append("text")
-	  .attr("transform", "rotate(-90)")
+	  .attr("transform", transformLegend)
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
