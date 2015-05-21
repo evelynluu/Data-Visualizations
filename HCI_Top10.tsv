@@ -1,4 +1,4 @@
-school	overall_rank	overall_h-index_score	overall_h-index	rank_by_individual	rank_by_individual_h-index_score	rank_by_individual_h-index	num_of_faculty	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29
+school	overall_rank	overall_h_index_score	overall_h_index	rank_by_individual	rank_by_individual_h_index_score	rank_by_individual_h_index	num_of_faculty	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29
 CMU	1	100.00	1148	3	48.22	27.52	28	86	74	71	68	59	58	54	53	52	50	50	49	46	44	43	36	35	33	33	31	31	26	21	18	13	10	2	1	1
 GaTech	2	45.99	528	9	39.66	22.63	21	51	45	39	35	34	34	29	28	26	25	24	24	21	19	19	17	14	13	11	11	9								
 UCI	2	45.99	528	8	42.66	24.35	18	59	49	46	44	42	37	35	34	33	33	28	20	18	16	11	9	8	6											
