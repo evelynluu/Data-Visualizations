@@ -47,7 +47,7 @@ d3.csv(dataset, function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-	  .attr("x", -20)
+	  .attr("x", -100)
       .attr("y", -50)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
