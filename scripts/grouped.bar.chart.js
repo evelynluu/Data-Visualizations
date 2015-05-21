@@ -47,9 +47,9 @@ d3.csv(dataset, function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      .attr("y", 10)
       .attr("dy", ".71em")
-      .style("text-anchor", "start")
+      .style("text-anchor", "end")
       .text("Rankings By Individual");
 
   var school = svg.selectAll(".school")
