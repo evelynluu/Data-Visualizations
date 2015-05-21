@@ -48,7 +48,7 @@ function createBarGraph(barID, dataset){
 svg.call(barTip);
 
 d3.tsv(dataset, function(error, data) {
-  x.domain(data.map(function(d) { return d.university; }));
+  x.domain(data.map(function(d) { return d.school; }));
   y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_h_index_score; })]);
 
   svg.append("g")
@@ -65,7 +65,7 @@ d3.tsv(dataset, function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Score");
+      .text("Overall Score");
 
   svg.selectAll(".bar")
       .data(data)
