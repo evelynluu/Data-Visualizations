@@ -63,6 +63,7 @@ d3.tsv(dataset, function(error, data) {
       .call(yAxis)
     .append("text")
 	  .attr("transform", "rotate(-90)")
+	  .attr("x", -1*(height/3))
       .attr("y", -50)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
