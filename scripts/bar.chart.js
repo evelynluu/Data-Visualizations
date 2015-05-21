@@ -1,5 +1,5 @@
 /* Variables */
-var margin = {top: 50, right: 20, bottom: 30, left: 40},
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -38,7 +38,6 @@ createBarGraph("div#bar-HCI", "HCI_Top10.tsv");
 createBarGraph("div#bar-SE", "SE_Top10.tsv");
 createBarGraph("div#bar-CSCW", "CSCW_Top10.tsv");
 
- 
  /* Functions */
 function createBarGraph(barID, dataset){
 	var svg = d3.select(barID).append("svg")
