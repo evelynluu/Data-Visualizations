@@ -34,7 +34,7 @@ var barTip = d3.tip()
 
   
  /* Calling functions for creating graphs */
- createBarGraph("div#bar-graph1", "data/HCI_Top10.tsv");
+ createBarGraph("div#bar-graph1", "HCI_Top10.tsv");
 
  
  /* Functions */
