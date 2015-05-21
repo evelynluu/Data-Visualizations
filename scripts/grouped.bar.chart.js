@@ -54,7 +54,7 @@ d3.csv(dataset, function(error, data) {
       .text("Rankings By Individual");
 
   var school = svg.selectAll(".school")
-      .data(data)
+      .data(data + "<br/> hi")
     .enter().append("g")
       .attr("class", "g")
       .attr("transform", function(d) { return "translate(" + x(d.school) + ",0)"; })
