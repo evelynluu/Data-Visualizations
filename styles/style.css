@@ -4,8 +4,7 @@ body {
 
 div.graph-container{
 	width: auto;
-	margin: 10%;
-	margin-top: 5%;
+	margin: 5% 10% 20% 10%;
 	padding: 0;
 }
 
