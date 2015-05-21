@@ -60,8 +60,8 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.overall_score); })
       .attr("height", function(d) { return height - y(d.overall_score); })
-      .on('mouseover', tip.show)
-      .on('mouseout', tip.hide)
+      .on('mouseover', bar-tip.show)
+      .on('mouseout', bar-tip.hide)
 
 });
 
