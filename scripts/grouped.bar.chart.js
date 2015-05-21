@@ -40,6 +40,8 @@ d3.csv(dataset, function(error, data) {
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
+	  .on('mouseover', groupedBarTip.show)
+      .on('mouseout', groupedBarTip.hide)
       .call(xAxis);
 
   svg.append("g")
@@ -57,7 +59,7 @@ d3.csv(dataset, function(error, data) {
       .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x(d.overall_rank) + ",0)"; });
+      .attr("transform", function(d) { return "translate(" + x(d.school) + ",0)"; });
 
   school.selectAll("rect")
       .data(function(d) { return d.rankings; })
