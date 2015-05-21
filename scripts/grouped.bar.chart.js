@@ -53,7 +53,7 @@ d3.csv(dataset, function(error, data) {
       .attr("y", -50)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Rankings By Individual");
+      .text("Ranking");
 
   var school = svg.selectAll(".school")
       .data(data)

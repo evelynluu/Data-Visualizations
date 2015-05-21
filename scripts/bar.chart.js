@@ -1,3 +1,5 @@
+/* Sample Code Source: http://bl.ocks.org/Caged/6476579 */
+
 /* Variables */
 var margin = {top: 20, right: 20, bottom: 30, left: 60},
     width = 960 - margin.left - margin.right,
