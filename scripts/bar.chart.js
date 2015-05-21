@@ -17,20 +17,20 @@ var yAxis = d3.svg.axis()
     .orient("left")
 	.ticks([15]);
 	
-var tip = d3.tip()
+var bar-tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
     return "<strong>Overall Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
   })
 
-var svg = d3.select("div#bargraph1").append("svg")
+var svg = d3.select("div#bar-graph1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.call(tip);
+svg.call(bar-tip);
 
 d3.tsv("HCI_Top10.tsv", function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
@@ -65,11 +65,10 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
 
 });
 
+function createBarGraph(barID, dataset){
+}
+
 function type(d) {
   d.overall_score = +d.overall_score;
   return d;
 }
-
-var transformLegend = d3.svg.transform()
-	.translate(-10, 0)
-	.rotate(-90);
