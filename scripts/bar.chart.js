@@ -16,7 +16,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-	.tickFormat(d3.format(".2g"));
+	.tickFormat(d3.format(".5g"));
 	/*.ticks([15]);*/
 	
 var barTip = d3.tip()
@@ -51,7 +51,7 @@ svg.call(barTip);
 
 d3.tsv(dataset, function(error, data) {
   x.domain(data.map(function(d) { return d.school; }));
-  y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_h_index_score; })]);
+  y.domain([0, 105]);//d3.max(data, function(d) { return d.overall_h_index_score; })]);
 
   svg.append("g")
       .attr("class", "x axis")
