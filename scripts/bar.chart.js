@@ -34,9 +34,9 @@ var barTip = d3.tip()
 
   
 /* Calling functions for creating graphs */
-createBarGraph("div#bar-graph-HCI", "HCI_Top10.tsv");
-createBarGraph("div#bar-graph-SE", "SE_Top10.tsv");
-createBarGraph("div#bar-graph-CSCW", "CSCW_Top10.tsv");
+createBarGraph("div#bar-HCI", "HCI_Top10.tsv");
+createBarGraph("div#bar-SE", "SE_Top10.tsv");
+createBarGraph("div#bar-CSCW", "CSCW_Top10.tsv");
 
  
  /* Functions */
