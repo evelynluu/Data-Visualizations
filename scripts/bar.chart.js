@@ -1,3 +1,4 @@
+/* Variables */
 var margin = {top: 50, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -31,7 +32,14 @@ var barTip = d3.tip()
     return "<strong>Faculty Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
   })
 
-var svg = d3.select("div#bar-graph1").append("svg")
+  
+ /* Calling functions for creating graphs */
+ createBarGraph("div#bar-graph1", "HCI_Top10.tsv");
+
+ 
+ /* Functions */
+function createBarGraph(barID, dataset){
+	var svg = d3.select(barID).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -39,7 +47,7 @@ var svg = d3.select("div#bar-graph1").append("svg")
 
 svg.call(barTip);
 
-d3.tsv("HCI_Top10.tsv", function(error, data) {
+d3.tsv(dataset, function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
   y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_score; })]);
 
@@ -70,9 +78,7 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
       .on('mouseover', barTip.show)
       .on('mouseout', barTip.hide)
 
-});
-
-function createBarGraph(barID, dataset){
+	});
 }
 
 function type(d) {
