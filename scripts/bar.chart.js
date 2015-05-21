@@ -17,7 +17,7 @@ var yAxis = d3.svg.axis()
     .orient("left")
 	.ticks([15]);
 	
-var tip = d3.tip()
+var barTip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
@@ -30,7 +30,7 @@ var svg = d3.select("div#bar-graph1").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.call(tip);
+svg.call(barTip);
 
 d3.tsv("HCI_Top10.tsv", function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
@@ -60,8 +60,8 @@ d3.tsv("HCI_Top10.tsv", function(error, data) {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.overall_score); })
       .attr("height", function(d) { return height - y(d.overall_score); })
-      .on('mouseover', tip.show)
-      .on('mouseout', tip.hide)
+      .on('mouseover', barTip.show)
+      .on('mouseout', barTip.hide)
 
 });
 
