@@ -17,7 +17,6 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 	.tickFormat(d3.format("g"));
-	/*.ticks([15]);*/
 	
 var barTip = d3.tip()
   .attr('class', 'd3-tip')
@@ -64,7 +63,7 @@ d3.tsv(dataset, function(error, data) {
       .call(yAxis)
     .append("text")
 	  .attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      .attr("y", -50)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Overall Score");
