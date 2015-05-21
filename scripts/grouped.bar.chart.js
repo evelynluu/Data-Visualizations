@@ -54,12 +54,10 @@ d3.csv(dataset, function(error, data) {
       .text("Rankings By Individual");
 
   var school = svg.selectAll(".school")
-      .data(data + "<br/> hi")
+      .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x(d.school) + ",0)"; })
-	  .on('mouseover', barTip.show)
-      .on('mouseout', barTip.hide);
+      .attr("transform", function(d) { return "translate(" + x(d.overall_rank + " " + d.school) + ",0)"; });
 
   school.selectAll("rect")
       .data(function(d) { return d.rankings; })
