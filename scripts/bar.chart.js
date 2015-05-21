@@ -71,7 +71,7 @@ d3.tsv(dataset, function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(d.university); })
+      .attr("x", function(d) { return x(d.school); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.overall_h_index_score); })
       .attr("height", function(d) { return height - y(d.overall_h_index_score); })
