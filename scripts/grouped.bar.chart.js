@@ -57,9 +57,9 @@ d3.csv(dataset, function(error, data) {
       .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x(d.school) + ",0)"; });
+      .attr("transform", function(d) { return "translate(" + x(d.school) + ",0)"; })
 	  .on('mouseover', barTip.show)
-      .on('mouseout', barTip.hide)
+      .on('mouseout', barTip.hide);
 
   school.selectAll("rect")
       .data(function(d) { return d.rankings; })
