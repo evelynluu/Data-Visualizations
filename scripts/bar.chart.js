@@ -23,6 +23,13 @@ var barTip = d3.tip()
   .html(function(d) {
     return "<strong>Overall Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
   })
+  
+ var groupedBarTip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Faculty Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
+  })
 
 var svg = d3.select("div#bar-graph1").append("svg")
     .attr("width", width + margin.left + margin.right)
