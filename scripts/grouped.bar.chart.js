@@ -78,7 +78,7 @@ d3.csv("HCI_Top10.csv", function(error, data) {
       .attr("height", function(d) { return height - y(d.value); })
       .style("fill", function(d) { return color(d.name); });
 
-  var legend = svg.selectAll(".legend")
+  /*var legend = svg.selectAll(".legend")
       .data(facultyRank.slice().reverse())
     .enter().append("g")
       .attr("class", "legend")
@@ -95,6 +95,6 @@ d3.csv("HCI_Top10.csv", function(error, data) {
       .attr("y", 9)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
-      .text(function(d) { return d; });
+      .text(function(d) { return d; });*/
 
 });
