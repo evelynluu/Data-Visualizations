@@ -57,7 +57,7 @@ d3.csv(dataset, function(error, data) {
       .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x(d.overall_rank + " " + d.school) + ",0)"; });
+      .attr("transform", function(d) { return "translate(" + x(d.overall_rank) + ",0)"; });
 
   school.selectAll("rect")
       .data(function(d) { return d.rankings; })
