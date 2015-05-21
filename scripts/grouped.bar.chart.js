@@ -8,8 +8,8 @@ var color = d3.scale.ordinal()
 
 /* Calling functions for creating graphs */
 createGroupedBarGraph("div#grouped-bar-HCI", "HCI_Top10.csv");
-createGroupedBarGraph("div#grouped-bar-SE", "SE_Top10.tsv");
-createGroupedBarGraph("div#grouped-bar-CSCW", "CSCW_Top10.tsv");
+createGroupedBarGraph("div#grouped-bar-SE", "SE_Top10.csv");
+createGroupedBarGraph("div#grouped-bar-CSCW", "CSCW_Top10.csv");
 	
 /*Functions*/
 function createGroupedBarGraph(barID, dataset) {
