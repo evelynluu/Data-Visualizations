@@ -22,19 +22,19 @@ var barTip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Overall Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
+    return "<strong>Overall Score:</strong> <span style='color:cyan'>" + d.overall_h-index_score + "</span>";
   })
   
  var groupedBarTip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Faculty Score:</strong> <span style='color:cyan'>" + d.overall_score + "</span>";
+    return "<strong>Faculty Score:</strong> <span style='color:cyan'>" + d.overall_h-index_score + "</span>";
   })
 
   
  /* Calling functions for creating graphs */
- createBarGraph("div#bar-graph1", "HCI_Top10.tsv");
+ createBarGraph("div#bar-graph1", "data/HCI_Top10.tsv");
 
  
  /* Functions */
@@ -49,7 +49,7 @@ svg.call(barTip);
 
 d3.tsv(dataset, function(error, data) {
   x.domain(data.map(function(d) { return d.university; }));
-  y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_score; })]);
+  y.domain([0, 100]);//d3.max(data, function(d) { return d.overall_h-index_score; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -73,8 +73,8 @@ d3.tsv(dataset, function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.university); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.overall_score); })
-      .attr("height", function(d) { return height - y(d.overall_score); })
+      .attr("y", function(d) { return y(d.overall_h-index_score); })
+      .attr("height", function(d) { return height - y(d.overall_h-index_score); })
       .on('mouseover', barTip.show)
       .on('mouseout', barTip.hide)
 
@@ -82,6 +82,6 @@ d3.tsv(dataset, function(error, data) {
 }
 
 function type(d) {
-  d.overall_score = +d.overall_score;
+  d.overall_h-index_score = +d.overall_h-index_score;
   return d;
 }
