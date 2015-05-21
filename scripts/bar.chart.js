@@ -16,7 +16,8 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-	.ticks([15]);
+	.tickFormat(d3.format(".2s"));
+	/*.ticks([15]);*/
 	
 var barTip = d3.tip()
   .attr('class', 'd3-tip')

@@ -19,7 +19,7 @@ function createGroupedBarGraph(barID, dataset) {
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv(dataset, function(error, data) {
+d3.csv(dataset, function(error, data) {
   var facultyRank = d3.keys(data[0]).filter(function(key) { return key !== "school" && 
 																								   key !== "overall_rank" &&
 																								   key !== "overall_h_index_score" &&
